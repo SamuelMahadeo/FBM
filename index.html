@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/pokeball icon.png">
+
+ 
+
+	<title>Pokemon Battle Trainer</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+    
+		.attribution {
+			font-size: 11px;
+			text-align: center;
+		}
+
+		.attribution a {
+			color: hsl(228, 45%, 44%);
+		}
+
+    .button-rules{
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    background-color: rgb(192, 202, 230);
+    color: #fff;
+    font-size: 20px;
+    font-family: inherit;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    bottom: 30px;
+    right: 370px;
+    }
+	</style>
+<script type='text/javascript' src="script.js" defer>
+	</script>
+</head>
+
+<body onload="playPoke()">
+  <header>
+	<div class="container">
+    <div class="poke-text">
+			<h1 id = "poketext">
+				<span>Pokemon</span>
+        <span>Battle</span>
+        <span>Trainer</span>
+      </h1>
+      <div>
+        <div class="holder-container">
+        <div class="score-container">
+          <h4>Score</h4>
+          <p id="score">0</p>
+        </div>
+        <div class="streak-container">
+          <h4>Streak</h4>
+          <p id="streak">0</p>
+        </div>
+        </div>
+    </header>
+
+      <main id="main">
+        <button class="button-choice button-water pick" data-choice="water">
+          <span class="wrapper">
+          <img src="images/water.svg" alt="water ico">
+        </span>
+        </button>
+
+        <button class="button-choice button-grass pick" data-choice="grass">
+          <span class="wrapper">
+          <img src="images/grass.svg" alt="grass ico">
+        </span>
+        </button>
+        
+        <button class="button-choice button-fire pick" data-choice="fire">
+          <span class="wrapper">
+          <img src="images/fire.svg" alt="fire ico">
+        </span>
+        </button>
+      </main>
+
+
+      <div class="selection" id="selection">
+        <div>
+          <h2>You Picked</h2>
+          <button class="button-choice button-water" data-choice="water" id="userSelection">
+            <span class="wrapper">
+            <img src="images/water.svg" alt="water ico">
+          </span>
+          </button>
+        </div>
+
+        <div id = "play-again">
+          <p id="text">You
+            <span id="winner">win</span>
+          </p>
+          <button class="button" id="reset">Play Again</button>
+        </div>
+
+        <div class = "house-pick">
+          <h2>The House Picked</h2>
+          <button class="button-choice button-grass" data-choice="grass" id="computerSelection">
+            <span class="wrapper">
+            <img src="images/grass.svg" alt="grass ico">
+          </span>
+          </button>
+        </div>
+      </div>
+
+    
+      <div id="ruleswindow">
+          <button class="button" id="reset" onclick="returnwindow()">Return</button>
+      </div>
+
+     <audio id = "pokesong">
+	      <source src="pokesong.mp3"></source>
+	      Your browser isn't invited for super fun audio time.
+        </audio>
+
+     
+
+  </div>
+
+  <div class="button-container">
+  
+  <button class="button-about"> <a href="rules.html"> Rules </a></button>
+
+   <button class="button-about" margin-right='500px'> <a href="about.html"> about us </a></button>
+     
+  <button id="mp" class="button-about" margin-right='400px' onclick="stopPoke()"> mute </button>     
+  
+  </div>
+</body>
+
+</html>

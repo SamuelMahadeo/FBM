@@ -1,0 +1,306 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: url(images/pokebackground.jpg) no-repeat center;
+    font-family: 'Press Start 2P', sans-serif;
+    display: block;
+    z-index: -10;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    color: #fff;
+    font-weight: 600, 700;
+  background-size: cover;
+    
+}
+
+.container{
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 20px;
+  padding-left: max(5%, 17px);
+  padding-right: max(5%, 17px);
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: auto;
+  width: 70%;
+  position: relative;
+  display: flex;
+  height: auto;
+  border-bottom:3px solid #d3d3d3;
+  border-left:3px solid #d3d3d3;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#poke-text{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#poketext{
+  font-size: max(3vw, 30px);
+  text-align: center;
+}
+
+header{
+    
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 50px 0;
+}
+
+h1{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 3rem;
+    line-height: 1.0;
+    text-transform: uppercase;
+}
+
+h2{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h4{
+    color: hsl(229, 64%, 46%);
+    letter-spacing: 5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.holder-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.score-container{
+  background-color: #fff;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;  
+}
+
+.score-container p{
+    color: hsl(229, 25%, 31%);
+    margin: 0;
+    font-size: 3.3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.streak-container{
+  background-color: #fff;
+  padding: 20px 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.streak-container p{
+    color: hsl(229, 25%, 31%);
+    margin: 0;
+    font-size: 3.3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.button-rules{
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    background-color: rgb(192, 202, 230);
+    color: #fff;
+    font-size: 20px;
+    font-family: inherit;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+   
+  
+}
+
+.button-about{
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    background-color:rgb(192, 202, 230);
+    color: #fff;
+    font-size: 20px;
+    font-family: inherit;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    margin-top:auto;
+  
+  
+    
+}
+#mp{
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    background-color:rgb(192, 202, 230);
+    color: #fff;
+    font-size: 20px;
+    font-family: inherit;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+  
+    
+}
+.button-container {
+  position: relative;
+  margin-top: 10px;
+  float: left;
+}
+.mute {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+main::before{
+    background-image: url(images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    height: 70%;
+    width: 70%;
+    z-index: -1;
+}
+
+.button-choice{
+    border: none;
+    margin: 0 25px;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    box-shadow: inset 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* this removes the blue outline around selected buttons */
+
+.button.choice:focus{
+    outline: none;
+}
+
+/* this makes the selected buttons change in size for effects */
+
+.button-choice:active{
+    transform: scale(0.9);
+}
+
+.button-choice .wrapper{
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    
+}
+
+.button-water{
+    background: linear-gradient(
+    to bottom,
+
+    hsl(230, 89%, 62%), 
+    hsl(230, 89%, 65%)
+    );
+}
+
+.button-grass{
+   background: linear-gradient(
+    hsl(147, 100%, 49%),
+    hsl(147, 84%, 53%)
+   );
+}
+
+.button-fire{
+    background: linear-gradient(
+     hsl(349, 71%, 52%),
+     hsl(349, 70%, 56%)
+    );
+}
+
+.button{
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: #fff;
+    color: hsl(229, 25%, 31%);
+    font-size: 20px;
+    font-family: inherit;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.selection{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+    width: auto;
+    
+    margin: 0 auto;
+    margin-right: 100px;
+    text-transform: uppercase;
+}
+
+.selection .button-choice{
+    margin: 50px;
+    transform: scale(1.3);
+}
+
+.text{
+    font-size: 3rem;
+    margin: 0 0 20px;
+    line-height: 0.8;
+}
+
+help{
+  align-content: center;
+  box-shadow: 2px -1px 400px 200px rgba(0,0,0,1);
+}
+
+#play-again{
+  left: auto;
+  right: auto;
+}
+
+#computerSelection{
+  position: relative;
+  right: min(8vw, 10px);
+}
+
